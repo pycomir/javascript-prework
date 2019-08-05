@@ -4,11 +4,20 @@
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 </head>
 <body>
-	<div class="container">
-		<div id="buttons"></div>
-		<div id="messages"></div>
+	<header class="header container">
+		<h1>Papier, kamień i nożyce.</h1>
+		<p>Zagraj</p>
+	</header>
+	<div class="game container">
+		<div class="buttons" id="buttons">
+			<button class="rock" type="button" id="play-rock"><i class="far fa-hand-rock"></i></button>
+			<button class="paper"type="button" id="play-paper"><i class="far fa-hand-paper"></i></button>
+			<button class="scissors"type="button" id="play-scissors"><i class="far fa-hand-scissors"></i></button>
+		</div>
+		<div class="messages" id="messages"></div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
