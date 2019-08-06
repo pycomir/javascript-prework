@@ -1,20 +1,12 @@
 {
-  console.log(playGame);
 
-  function playGame(playerInput) {
+  const playGame = function(playerInput) {
+
+    console.log(playGame);
 
     clearMessages();
 
-    const randomNumber = Math.floor(Math.random() * 3 + 1),
-      argComputerMove = getMoveName(randomNumber),
-      argPlayerMove = getMoveName(playerInput);
-
-    console.log('Wylosowana liczba to: ' + randomNumber);
-
-
-    console.log(getMoveName)
-
-    function getMoveName(argMoveId) {
+  const getMoveName = function (argMoveId) {
       if(argMoveId == 1 ) {
         return 'kamień';
       }
@@ -24,17 +16,21 @@
       else if (argMoveId == 3) {
         return 'nożyce';
       }
-      printMessage('To prosta gra. Nie kombinuj. ' + argMoveId + ' nie mieści się w przedziale 1-3 ;)');
-      return 'nieznany ruch';
     }
+
+    const randomNumber = Math.floor(Math.random() * 3 + 1),
+    argComputerMove = getMoveName(randomNumber),
+    argPlayerMove = getMoveName(playerInput);
+
+    console.log('Wylosowana liczba to: ' + randomNumber);
+
+    console.log(getMoveName)
 
     console.log('Gracz wpisał: ' + playerInput);
 
-    //const argPlayerMove = getMoveName(playerInput);
 
-    console.log(displayResult)
-
-    function displayResult (argPlayerMove, argComputerMove) {
+    const displayResult = function(argPlayerMove, argComputerMove) {
+      console.log(displayResult)
       console.log('moves:', argComputerMove, argPlayerMove);
       printMessage('Mój ruch to: ' + argComputerMove);
       printMessage('Twój ruch to: ' + argPlayerMove);
@@ -50,9 +46,9 @@
       else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
         printMessage('Wygrałeś');
       }
-      else if (argPlayerMove == 'nieznany ruch') {
+      /*else if (argPlayerMove == 'nieznany ruch') {
         printMessage('Wybierz cyfrę od 1 do 3');
-      }
+      }*/
       else {
         printMessage('Przegrałeś')
       }
