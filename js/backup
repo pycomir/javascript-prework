@@ -1,19 +1,12 @@
 {
-  console.log(playGame);
 
-  function playGame(playerInput) {
+  const playGame = function(playerInput) {
+
+    console.log(playGame);
 
     clearMessages();
 
-    const randomNumber = Math.floor(Math.random() * 3 + 1),
-      argComputerMove = getMoveName(randomNumber),
-      argPlayerMove = getMoveName(playerInput);
-
-    console.log('Wylosowana liczba to: ' + randomNumber);
-
-    console.log(getMoveName)
-
-    function getMoveName(argMoveId) {
+  const getMoveName = function (argMoveId) {
       if(argMoveId == 1 ) {
         return 'kamień';
       }
@@ -24,6 +17,14 @@
         return 'nożyce';
       }
     }
+
+  const randomNumber = Math.floor(Math.random() * 3 + 1),
+    argComputerMove = getMoveName(randomNumber),
+    argPlayerMove = getMoveName(playerInput);
+
+    console.log('Wylosowana liczba to: ' + randomNumber);
+
+    console.log(getMoveName)
 
     console.log('Gracz wpisał: ' + playerInput);
 

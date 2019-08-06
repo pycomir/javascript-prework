@@ -6,39 +6,39 @@
 
       clearMessages();
 
-    const getMoveName = function (argMoveId) {
-        if(argMoveId == 1 ) {
+    const getMoveName = function(a) {
+        if (a == 1) {
           return 'kamień';
         }
-        else if (argMoveId == 2 ) {
+        else if (a == 2) {
           return 'papier';
         }
-        else if (argMoveId == 3) {
+        else if (a == 3) {
           return 'nożyce';
         }
       }
       console.log(getMoveName)
 
     const randomNumber = Math.floor(Math.random() * 3 + 1),
-      argComputerMove = getMoveName(randomNumber),
-      argPlayerMove = getMoveName(playerInput);
+      computerMove = getMoveName(randomNumber),
+      playerMove = getMoveName(playerInput);
       console.log('Wylosowana liczba to: ' + randomNumber);
       console.log('Gracz wpisał: ' + playerInput);
-      console.log('ruchy to:', argComputerMove, argPlayerMove);
+      console.log('ruchy to:' + computerMove, playerMove);
 
-    const displayResult = function(argPlayerMove, argComputerMove) {
-      printMessage('Mój ruch to: ' + argComputerMove);
-      printMessage('Twój ruch to: ' + argPlayerMove);
-      if (argComputerMove == argPlayerMove) {
+    const displayResult = function(a, b) {
+      printMessage('Twój ruch to: ' + a);
+      printMessage('Mój ruch to: ' + b);
+      if (a == b) {
         printMessage('Mamy remis');
       }
-      else if (argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+      else if (b == 'kamień' && a == 'papier'){
         printMessage('Wygrałeś');
       }
-      else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+      else if (b == 'papier' && a == 'nożyce') {
         printMessage('Wygrałeś');
       }
-      else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
+      else if (b == 'nożyce' && a == 'kamień') {
         printMessage('Wygrałeś');
       }
       else {
@@ -46,7 +46,7 @@
       }
     }
 
-    displayResult(argPlayerMove, argComputerMove)
+    displayResult(playerMove, computerMove)
     console.log(displayResult)
 
   }
